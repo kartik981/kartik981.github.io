@@ -1,11 +1,13 @@
 title: Kartik Kokane
 logo:
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
- 
-  Second description 
+  Data Analyst/ Business Analyst 
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  I am a Data Analyst with a passion for uncovering insights from data to drive business decisions.
+  <br><br>
+  With expertise in data cleaning, visualization, predictive modeling, and automation, I specialize in using Exce.
+  <br><br>
+  <a href="www.linkedin.com/in/kartik-kokane">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
