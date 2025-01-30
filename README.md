@@ -17,7 +17,7 @@ This project performs **sentiment analysis and engagement prediction** on **Dona
 Developed a **dynamic and interactive Coffee Sales Dashboard in Excel** to analyze sales performance across **different coffee types, regions, and customer preferences**. The dataset contained **50,000 sales transactions** with attributes such as **order date, customer ID, product type, quantity sold, and pricing**. Using **Pivot Tables, Pivot Charts, Slicers, and Timelines**, the dashboard allows users to filter data dynamically. Key insights include **sales trends over time, top customers, and regional performance**. **XLOOKUP and INDEX MATCH** were used for efficient data retrieval, while **custom formatting and interactive elements** improved usability. This project demonstrates expertise in **Excel-based data visualization, automation, and business intelligence**.
 
 # 🎓 Certifications
-##Google Advanced Analytics Career Certificate
+## Google Advanced Analytics Career Certificate
 ![Google Advanced Analytics Career Certificate](https://github.com/kartik981/kartik981.github.io/blob/ae1824aa68382dcfd01f335341bc5597b6a79039/Coursera%20OONZ5XLKI2PO-1.png)
 | Azure Data Fundamentals | PMI: Project Management Ready |
 |---------|---------|
