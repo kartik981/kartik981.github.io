@@ -4,7 +4,7 @@ Welcome to my **Data Analytics Portfolio**, where I showcase my projects that ut
 
 # 🚀 Projects
 
-## 📊 Market Segmentation for a Chain Restaurant
+## 📊 [Market Segmentation for a Chain Restaurant](https://github.com/kartik981/Market-Segmentation-Project)
 This project focuses on **customer segmentation** to assist a restaurant in identifying the best target audience for their expansion. Using **hierarchical clustering and K-means clustering**, I analyzed a dataset containing **1,000 customer records** with demographic and behavioral attributes. The optimal number of **five customer segments** was determined through **elbow method analysis**, each group exhibiting distinct purchasing patterns and brand preferences. **Tableau dashboards** were developed to visualize **demographics, spending habits, and psychographics**, providing actionable insights for **personalized marketing and store location selection**.
 
 ## 💻 Finding Key Factors Affecting Customer Decisions (Conjoint Analysis)
