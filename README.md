@@ -1,16 +1,32 @@
 # 🚀 Data Analytics Portfolio
 
 ## 📊 [Market Segmentation for a Chain Restaurant](https://github.com/kartik981/Market-Segmentation-Project)
-This project focuses on **customer segmentation** to assist a restaurant in identifying the best target audience for their expansion. Using **hierarchical clustering and K-means clustering**, I analyzed a dataset containing **1,000 customer records** with demographic and behavioral attributes. The optimal number of **five customer segments** was determined through **elbow method analysis**, each group exhibiting distinct purchasing patterns and brand preferences. **Tableau dashboards** were developed to visualize **demographics, spending habits, and psychographics**, providing actionable insights for **personalized marketing and store location selection**.
+- Conducted **customer segmentation** to identify the best target audience for expansion.
+- Used **hierarchical clustering and K-means clustering** on **1,000 customer records**.
+- Determined **five customer segments** using the **elbow method analysis**.
+- Developed **Tableau dashboards** to visualize **demographics, spending habits, and psychographics**.
+- Provided actionable insights for **personalized marketing and store location selection**.
 
 ## 💻 [Finding Key Factors Affecting Customer Decisions (Conjoint Analysis)](https://github.com/kartik981/Conjoint-Analysis-to-predict-CustomerDecisions)
-This study uses **conjoint analysis and Principal Component Analysis (PCA)** to determine the key attributes influencing **laptop purchasing decisions**. The dataset originally had **576 possible product profiles**, which were reduced to **20 optimized profiles** using **fractional factorial design**. The study examined **five main product attributes (Brand, Hard Drive, RAM, Screen Size, and Price)**. Results showed that **RAM (25%) and Screen Size (25.85%)** were the most influential attributes. A **market simulation using a First Choice Model and Logit Share Model** predicted that **Apple laptops dominated the market with 37% preference**, while Dell had zero market share. These insights can be used to **optimize pricing, product features, and marketing strategies**.
+- Used **conjoint analysis and Principal Component Analysis (PCA)** to analyze laptop purchases.
+- Reduced **576 possible product profiles** to **20 optimized profiles** using **fractional factorial design**.
+- Examined **Brand, Hard Drive, RAM, Screen Size, and Price** as primary attributes.
+- Found that **RAM (25%) and Screen Size (25.85%)** were the most influential attributes.
+- Conducted a **market simulation**, revealing that **Apple had a 37% market preference**, while Dell had none.
 
 ## 🐦 [Twitter Sentiment Analysis & Like Prediction](https://github.com/kartik981/Twitter-Text-Mining-for-Sentiment-Analysis-)
-This project performs **sentiment analysis and engagement prediction** on **Donald Trump’s tweets** to examine public perception and predict tweet popularity. The dataset includes **40,000 tweets** from **2014 to 2020**, analyzed using **Natural Language Processing (NLP)**. Sentiment analysis was conducted using **VADER and TextBlob**, categorizing tweets into **positive, neutral, and negative sentiments**. **Machine learning models (Random Forest, Linear Regression, and Naïve Bayes)** were used to predict tweet likes, with **Random Forest achieving the highest accuracy of 72.61%**. The analysis revealed that **controversial and patriotic tweets, such as those mentioning "Make America Great Again," had the highest engagement levels**, providing insights into **social media strategy and political communication**.
+- Performed **sentiment analysis and engagement prediction** on **40,000 tweets**.
+- Applied **Natural Language Processing (NLP)** using **VADER and TextBlob**.
+- Categorized tweets into **positive, neutral, and negative sentiments**.
+- Used **Random Forest (72.61% accuracy), Linear Regression, and Naïve Bayes** for like prediction.
+- Found that **controversial and patriotic tweets (e.g., "Make America Great Again") had the highest engagement**.
 
 ## ☕ [Interactive Coffee Sales Dashboard in Excel](https://github.com/kartik981/Coffee-Sales-Excel-Dashboard)
-Developed a **dynamic and interactive Coffee Sales Dashboard in Excel** to analyze sales performance across **different coffee types, regions, and customer preferences**. The dataset contained **50,000 sales transactions** with attributes such as **order date, customer ID, product type, quantity sold, and pricing**. Using **Pivot Tables, Pivot Charts, Slicers, and Timelines**, the dashboard allows users to filter data dynamically. Key insights include **sales trends over time, top customers, and regional performance**. **XLOOKUP and INDEX MATCH** were used for efficient data retrieval, while **custom formatting and interactive elements** improved usability. This project demonstrates expertise in **Excel-based data visualization, automation, and business intelligence**.
+- Created a **dynamic Coffee Sales Dashboard in Excel** to analyze sales trends.
+- Processed **50,000 sales transactions** with details like **order date, customer ID, product type, quantity, and pricing**.
+- Implemented **Pivot Tables, Pivot Charts, Slicers, and Timelines** for dynamic filtering.
+- Used **XLOOKUP and INDEX MATCH** for efficient data retrieval.
+- Provided insights into **sales trends, top customers, and regional performance**.
 
 # 🎓 Certifications
 <img src="Coursera OONZ5XLKI2PO-1.png?raw=true"/>
