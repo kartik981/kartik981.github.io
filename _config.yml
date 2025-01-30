@@ -1,4 +1,12 @@
 title: Kartik Kokane
-logo: https://github.com/kartik981/kartik981.github.io/blob/4677149a9b27cbd2e937b050a33df01a5fcf9cdc/Azure%20Fundamentals-1.png
-description: Data  <br/> Hello there <br/>hehehe
-theme: jekyll-theme-minimal
+logo:
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  First description 
+  <br><br>
+  Second description 
+  <br><br>
+  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
