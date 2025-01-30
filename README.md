@@ -18,6 +18,8 @@ Developed a **dynamic and interactive Coffee Sales Dashboard in Excel** to analy
 
 # 🎓 Certifications
 ![Google Advanced Analytics Career Certificate](https://github.com/kartik981/kartik981.github.io/blob/ae1824aa68382dcfd01f335341bc5597b6a79039/Coursera%20OONZ5XLKI2PO-1.png)
-![Azure Data Fundamentals] (https://github.com/kartik981/kartik981.github.io/blob/ae1824aa68382dcfd01f335341bc5597b6a79039/Azure%20Fundamentals-1.png) ![PMI: Project Management Ready](https://github.com/kartik981/kartik981.github.io/blob/055302eae7b7185736b8d0be1dec77297329dd2a/PMI%20Project%20Management%20Ready-1.png)
+| Image 1 | Image 2 |
+|---------|---------|
+| ![Azure Data Fundamentals](https://github.com/kartik981/kartik981.github.io/blob/ae1824aa68382dcfd01f335341bc5597b6a79039/Azure%20Fundamentals-1.png) | ![PMI: Project Management Ready](https://github.com/kartik981/kartik981.github.io/blob/055302eae7b7185736b8d0be1dec77297329dd2a/PMI%20Project%20Management%20Ready-1.png)
 # 📬 Connect With Me
 If you have any questions or would like to collaborate, feel free to reach out!
