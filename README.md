@@ -1,9 +1,14 @@
 # 🚀 Project Portfolio
 
-## 📊 [Twitter API Real-Time Data Processing](https://github.com/kartik981/Twitter-Search-API-COVID-19-)
+## 🐦 [Twitter API Real-Time Data Processing](https://github.com/kartik981/Twitter-Search-API-COVID-19-)
 - Developed a real-time data processing application for Twitter API responses using **Kafka, Cassandra, and MySQL**
 - Designed and implemented a **Flask API** to handle incoming Twitter data, with **Postman used for testing**
 - Utilized **Docker** to containerize the application for deployment and scalability
+
+## 💻 [Absenteeism at Work](https://github.com/kartik981/absenteeism_at_work)
+- Conducted extensive **data analysis, pre-processing**, and **feature engineering** to create a dataset for modelling
+- Implemented **Random Forest, XGBoost, Logistic Regression and SVM** to predict employee absenteeism
+- Utilized **hyper parameter tuning**, **cross-validation** and ensemble methods to improve model performance and generalization
 
 ## 📊 [Market Segmentation for a Chain Restaurant](https://github.com/kartik981/Market-Segmentation-Project)
 - Conducted **customer segmentation** to identify the best target audience for expansion.
