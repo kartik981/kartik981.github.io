@@ -1,4 +1,9 @@
-# 🚀 Data Analytics Portfolio
+# 🚀 Project Portfolio
+
+## 📊 [Twitter API Real-Time Data Processing](https://github.com/kartik981/Twitter-Search-API-COVID-19-)
+- Developed a real-time data processing application for Twitter API responses using **Kafka, Cassandra, and MySQL**
+- Designed and implemented a **Flask API** to handle incoming Twitter data, with **Postman used for testing**
+- Utilized **Docker** to containerize the application for deployment and scalability
 
 ## 📊 [Market Segmentation for a Chain Restaurant](https://github.com/kartik981/Market-Segmentation-Project)
 - Conducted **customer segmentation** to identify the best target audience for expansion.
