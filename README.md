@@ -10,13 +10,6 @@
 - Implemented **Random Forest, XGBoost, Logistic Regression and SVM** to predict employee absenteeism
 - Utilized **hyper parameter tuning**, **cross-validation** and ensemble methods to improve model performance and generalization
 
-## 📊 [Market Segmentation for a Chain Restaurant](https://github.com/kartik981/Market-Segmentation-Project)
-- Conducted **customer segmentation** to identify the best target audience for expansion.
-- Used **hierarchical clustering and K-means clustering** on **1,000 customer records**.
-- Determined **five customer segments** using the **elbow method analysis**.
-- Developed **Tableau dashboards** to visualize **demographics, spending habits, and psychographics**.
-- Provided actionable insights for **personalized marketing and store location selection**.
-
 ## 💻 [Finding Key Factors Affecting Customer Decisions (Conjoint Analysis)](https://github.com/kartik981/Conjoint-Analysis-to-predict-CustomerDecisions)
 - Used **conjoint analysis and Principal Component Analysis (PCA)** to analyze laptop purchases.
 - Reduced **576 possible product profiles** to **20 optimized profiles** using **fractional factorial design**.
