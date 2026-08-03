@@ -238,6 +238,7 @@
   @media(min-width: 720px){ .skill-grid{ grid-template-columns: repeat(3,1fr); } }
   .skill-card{ background: var(--bg-2); padding: 34px 30px; display:flex; flex-direction:column; gap:18px; transition: background .3s ease; }
   .skill-card.wide{ grid-column: 1 / -1; }
+  @media(min-width: 720px){ .skill-card.span2{ grid-column: span 2; } }
   .skill-card:hover{ background: var(--bg); }
   .skill-card .idx{ font-size:13px; color: var(--accent); font-weight:600; letter-spacing:.1em; }
   .skill-card h3{ font-family:"Instrument Serif",serif; font-size: 27px; font-weight:400; letter-spacing:-0.01em; }
@@ -254,20 +255,19 @@
   .edu-col .col-lbl{ font-size:13px; letter-spacing:.14em; text-transform:uppercase; color: var(--muted); font-weight:600; margin-bottom: 22px; }
   .edu-item{ display:flex; gap:18px; padding-block: 24px; border-top:1px solid var(--line); }
   .edu-col .edu-item:last-child{ border-bottom:1px solid var(--line); }
-  .edu-item .logo{ width:44px; height:44px; border-radius:12px; background: #fff; display:flex; align-items:center; justify-content:center; flex:none; margin-top:2px; overflow:hidden; border:1px solid var(--line); }
-  .edu-item .logo img{ width:100%; height:100%; object-fit:cover; }
+  .edu-item .logo{ width:44px; height:44px; border-radius:12px; background: #fff; display:flex; align-items:center; justify-content:center; flex:none; margin-top:2px; overflow:hidden; border:1px solid var(--line); padding:6px; }
+  .edu-item .logo img{ width:100%; height:100%; object-fit:contain; }
   .edu-item .body{ flex:1; }
   .edu-item .degree{ font-family:"Instrument Serif",serif; font-size: 23px; letter-spacing:-0.01em; line-height:1.25; }
   .edu-item .school{ color: var(--accent); font-weight:500; margin-top:4px; }
   .edu-item .when{ font-size:13.5px; color: var(--muted); margin-top:6px; }
   .cert-item{ display:flex; align-items:center; gap:18px; padding: 20px 22px; border:1px solid var(--line); border-radius:14px; background: var(--bg); color: var(--ink); }
   .cert-item + .cert-item{ margin-top:14px; }
-  .cert-item .badge{ width:44px; height:44px; border-radius:12px; background: #fff; display:flex; align-items:center; justify-content:center; flex:none; overflow:hidden; border:1px solid var(--line); }
-  .cert-item .badge img{ width:100%; height:100%; object-fit:cover; }
+  .cert-item .badge{ width:44px; height:44px; border-radius:12px; background: #fff; display:flex; align-items:center; justify-content:center; flex:none; overflow:hidden; border:1px solid var(--line); padding:6px; }
+  .cert-item .badge img{ width:100%; height:100%; object-fit:contain; }
   .cert-item .txt{ flex:1; }
   .cert-item .name{ font-weight:600; font-size:15.5px; }
   .cert-item .issuer{ font-size:13.5px; color: var(--muted); margin-top:3px; }
-  .mono{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: var(--accent-soft); color: var(--accent); font-weight:700; font-size:12px; letter-spacing:.02em; }
 
   /* ---------- Projects ---------- */
   .proj-list{ display:flex; flex-direction:column; }
@@ -497,7 +497,7 @@
   /* ---------- Let's Connect ---------- */
   .connect{ position:relative; overflow:hidden; }
   .connect-grid{ display:grid; grid-template-columns: 1fr; gap: 46px; margin-top: clamp(40px,5vw,64px); }
-  @media(min-width: 900px){ .connect-grid{ grid-template-columns: 1fr 1.1fr; gap: 64px; } }
+  .connect-grid-solo{ max-width: 620px; }
 
   .connect-buttons{ display:grid; grid-template-columns: repeat(2,1fr); gap: 16px; align-content:start; }
   .connect-btn{
@@ -526,27 +526,6 @@
   .connect-btn .sub{ font-size:12.5px; color: var(--muted); position:relative; z-index:1; }
   .connect-btn .go{ position:absolute; top:18px; right:18px; font-size:14px; color: var(--muted); opacity:0; transform: translate(-4px,4px); transition: opacity .3s ease, transform .3s ease; }
   .connect-btn:hover .go{ opacity:1; transform:none; color: var(--glow, var(--accent)); }
-
-  .connect-form{ border:1px solid var(--line); border-radius: 20px; padding: 30px; background: color-mix(in oklch, var(--bg-2) 55%, transparent); }
-  .connect-form h3{ font-family:"Instrument Serif",serif; font-weight:400; font-size: 26px; margin-bottom: 18px; }
-  .field{ margin-bottom: 16px; }
-  .field label{ display:block; font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color: var(--muted); margin-bottom:7px; }
-  .field input, .field textarea{
-    width:100%; padding: 12px 14px; border-radius: 10px; border:1px solid var(--line); background: var(--bg);
-    font-family: inherit; font-size:15px; color: var(--ink); transition: border-color .2s ease, box-shadow .2s ease;
-  }
-  .field input:focus, .field textarea:focus{ outline:none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-  .field textarea{ resize: vertical; min-height: 110px; }
-  .form-submit{
-    display:inline-flex; align-items:center; gap:10px; padding: 13px 26px; border-radius: 40px; border:none;
-    background: var(--ink); color: var(--bg); font-weight:600; font-size:15px; cursor:pointer;
-    transition: background .25s ease, transform .2s ease;
-  }
-  .form-submit:hover{ background: var(--accent); transform: translateY(-2px); }
-  .form-submit:disabled{ opacity:.6; cursor:default; transform:none; }
-  .form-status{ margin-top:14px; font-size:14px; min-height: 20px; }
-  .form-status.ok{ color: oklch(0.5 0.14 150); }
-  .form-status.err{ color: oklch(0.55 0.18 25); }
 
   footer{ padding-block: 30px; position:relative; z-index:2; background: color-mix(in oklch, var(--bg) var(--veil), transparent); backdrop-filter: blur(0.4px); -webkit-backdrop-filter: blur(0.4px); }
   .foot{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; color: var(--muted); font-size:13.5px; }
@@ -601,11 +580,11 @@
       <div class="hero-below reveal in">
         <div class="eyebrow" style="font-size: 16px">Data Analyst</div>
         <p class="hero-tagline">Turning tangled data into <em>clear</em> decisions.</p>
-        <p class="hero-sub" style="text-align: center">AWS Certified Data Professional building scalable analytics solutions — automating reporting, designing data pipelines, and delivering insights people can act on.</p>
+        <p class="hero-sub" style="text-align: center">AWS Certified Data Analyst automating reporting, building BI dashboards, and turning messy data into decisions people can act on.</p>
         <div class="hero-meta">
-          <span class="tag"><b>2+ yrs</b> Analytics</span>
-          <span class="tag"><b>SQL · Python · Snowflake · AWS</b></span>
-          <span class="tag"><b>London<span style="color: oklch(0.58 0.02 265); font-weight: 500;">, United Kingdom</span></b></span>
+          <span class="tag"><b>AWS Certified</b></span>
+          <span class="tag"><b>Python · SQL · Power BI</b></span>
+          <span class="tag"><b>Mumbai<span style="color: oklch(0.58 0.02 265); font-weight: 500;">, India</span></b></span>
         </div>
         <a class="cv-download" href="resume/Kartik-Kokane-CV.pdf" download>Download CV <span class="cv-arw">↓</span></a>
       </div>
@@ -625,7 +604,7 @@
       </div>
       <div class="about-grid">
         <div class="reveal">
-          <p class="about-lead" style="text-align: justify">AWS Certified Data Professional with 2 years of experience building scalable analytics solutions using <span class="hl">SQL, Python, Snowflake and Power BI</span>.</p>
+          <p class="about-lead" style="text-align: justify">AWS Certified Data Analyst building scalable analytics solutions using <span class="hl">SQL, Python, Snowflake and Power BI</span>.</p>
         </div>
         <div class="about-body reveal">
           <p style="text-align: justify">My work spans the full data lifecycle: integrating raw sources into governed warehouses, automating reporting that used to take hours in Excel, and delivering actionable business insights through analysis and stakeholder collaboration.</p>
@@ -636,9 +615,9 @@
       <div class="about-grid" style="margin-top: clamp(44px,6vw,72px);">
         <div class="about-body reveal">
           <div class="about-side">
-            <div class="row"><span class="k">Focus</span><span class="v">Data engineering · BI · Analytics strategy</span></div>
-            <div class="row"><span class="k">Approach</span><span class="v">Governance-first, automation-driven</span></div>
-            <div class="row"><span class="k">Location</span><span class="v">London, United Kingdom</span></div>
+            <div class="row"><span class="k">Focus</span><span class="v">Data analytics · BI · Reporting</span></div>
+            <div class="row"><span class="k">Approach</span><span class="v">Stakeholder-first, automation-driven</span></div>
+            <div class="row"><span class="k">Location</span><span class="v">Mumbai, India</span></div>
           </div>
         </div>
         <div class="reveal"></div>
@@ -657,49 +636,27 @@
         <div class="skill-card reveal">
           <span class="idx">01</span>
           <h3>Languages</h3>
-          <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">PySpark</span><span class="chip">SQL</span><span class="chip">Joins &amp; CTEs</span></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span></div>
         </div>
         <div class="skill-card reveal">
           <span class="idx">02</span>
-          <h3>Visualization &amp; reporting</h3>
+          <h3>Visualisation &amp; reporting</h3>
           <div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Excel</span></div>
         </div>
         <div class="skill-card reveal">
           <span class="idx">03</span>
           <h3>ML &amp; analytics</h3>
-          <div class="chips"><span class="chip">Predictive Modeling</span><span class="chip">Statistical Analysis</span><span class="chip">Hypothesis Testing</span><span class="chip">A/B Testing</span><span class="chip">Feature Engineering</span></div>
+          <div class="chips"><span class="chip">Predictive Modeling</span><span class="chip">Statistical Analysis</span><span class="chip">Exploratory Data Analysis</span></div>
         </div>
         <div class="skill-card reveal">
           <span class="idx">04</span>
           <h3>Cloud services</h3>
-          <div class="chips"><span class="chip">AWS S3</span><span class="chip">EC2</span><span class="chip">EMR</span><span class="chip">DynamoDB</span><span class="chip">Redshift</span><span class="chip">Glue</span><span class="chip">Lambda</span><span class="chip">Snowflake</span></div>
+          <div class="chips"><span class="chip">Snowflake</span><span class="chip">AWS</span></div>
         </div>
-        <div class="skill-card reveal">
+        <div class="skill-card span2 reveal">
           <span class="idx">05</span>
-          <h3>DevOps</h3>
-          <div class="chips"><span class="chip">dbt</span><span class="chip">Databricks</span><span class="chip">Airflow</span><span class="chip">Git</span></div>
-        </div>
-        <div class="skill-card reveal">
-          <span class="idx">06</span>
-          <h3>Data governance</h3>
-          <div class="chips"><span class="chip">Data Standards</span><span class="chip">Access Controls</span><span class="chip">Stakeholder Mgmt</span><span class="chip">Cross-functional Workflows</span></div>
-        </div>
-        <div class="skill-card wide reveal">
-          <span class="idx">07</span>
-          <h3>Architecture &amp; modeling</h3>
-          <div class="chips">
-            <span class="chip">Medallion Architecture</span>
-            <span class="chip">STAR Schema</span>
-            <span class="chip">Data Warehousing</span>
-            <span class="chip">Cohort &amp; Segmentation Analysis</span>
-            <span class="chip">Conjoint Analysis</span>
-            <span class="chip chip-extra hidden">Principal Component Analysis</span>
-            <span class="chip chip-extra hidden">K-Means Clustering</span>
-            <span class="chip chip-extra hidden">Random Forest</span>
-            <span class="chip chip-extra hidden">Logistic Regression</span>
-            <span class="chip chip-extra hidden">NLP / Sentiment Analysis</span>
-            <button type="button" class="chip chip-toggle">+5 more</button>
-          </div>
+          <h3>Business skills</h3>
+          <div class="chips"><span class="chip">Requirement Gathering</span><span class="chip">Stakeholder Management</span><span class="chip">Reporting/Dashboarding</span><span class="chip">Data Driven Decision Making</span></div>
         </div>
       </div>
     </div>
@@ -715,14 +672,13 @@
       <div class="exp-list">
 
         <div class="exp-item reveal">
-          <div class="exp-when">Jun 2025 – Mar 2026</div>
+          <div class="exp-when">May 2025 – Dec 2025</div>
           <div class="exp-body">
             <div class="exp-role">Operations Data Analyst</div>
-            <div class="exp-company">Bank Of London <span class="exp-context">— London, United Kingdom · SQL, Python, Power BI, Excel, Snowflake</span></div>
+            <div class="exp-company">Bank Of London <span class="exp-context">— London, United Kingdom</span></div>
             <ul class="exp-bullets">
-              <li>Drove the integration of Payments, Transaction Monitoring, and CRM data into Snowflake by defining business rules with the engineering team and implementing a Medallion architecture to improve data quality.</li>
               <li>Reduced reporting turnaround time by 80% by transforming manual Excel based reporting into automated Power BI dashboards, enabling near real time insights for decision-making.</li>
-              <li>Led enterprise data governance and analytics strategy by defining data standards, access controls and cross-functional workflows across compliance, product and operations teams.</li>
+              <li>Collaborated with the engineering team to integrate multiple data sources (Payments, Transaction Monitoring and CRM data) in Snowflake.</li>
               <li>Analyzed 10M+ transaction and CRM records to identify systemic data quality issues and implemented remediation strategies, significantly improving data reliability across operational systems.</li>
               <li>Engaged with senior stakeholders, engineering and business teams to align reporting and analytics with strategic goals.</li>
             </ul>
@@ -730,27 +686,26 @@
         </div>
 
         <div class="exp-item reveal">
-          <div class="exp-when">Apr 2024 – May 2025</div>
+          <div class="exp-when">Jan 2025 – Mar 2025</div>
           <div class="exp-body">
-            <div class="exp-role">Data Analyst</div>
-            <div class="exp-company">Crossworld AG <span class="exp-context">— Brienz, Switzerland (Remote) · SQL, Python, Power BI, Excel, AWS</span></div>
+            <div class="exp-role">Digital Engineer Trainee</div>
+            <div class="exp-company">Ernst &amp; Young <span class="exp-context">— Belfast, United Kingdom</span></div>
             <ul class="exp-bullets">
-              <li>Performed cohort and segmentation analysis to uncover behavioral drivers of engagement, contributing to an 18% increase in customer retention through targeted lifecycle strategies.</li>
-              <li>Developed predictive models for demand forecasting and churn prediction, enabling data-driven marketing and operational planning.</li>
-              <li>Designed and deployed automated Power BI dashboards, delivering real time executive insights and eliminating repetitive manual reporting workflows.</li>
+              <li>Selected as one of 20 candidates across the UK for the EY Digital Engineering Academy, organized by the Department for the Economy.</li>
+              <li>Participating in EY's client-facing simulations, preparing for real-world industry scenarios through hands-on assessments and project work.</li>
+              <li>Engaged in a FRESH Design Thinking Course, enhancing problem-solving abilities and fostering innovation.</li>
             </ul>
           </div>
         </div>
 
         <div class="exp-item reveal">
-          <div class="exp-when">Jan 2024 – Mar 2024</div>
+          <div class="exp-when">Jan 2024 – Mar 2025</div>
           <div class="exp-body">
-            <div class="exp-role">Digital Engineering Intern</div>
-            <div class="exp-company">Ernst &amp; Young <span class="exp-context">— Belfast, United Kingdom · SQL, Python, Azure, Django, React</span></div>
+            <div class="exp-role">Restaurant Team Leader</div>
+            <div class="exp-company">KFC <span class="exp-context">— Belfast, United Kingdom</span></div>
             <ul class="exp-bullets">
-              <li>Built data ingestion pipeline (REST framework) using Django and React, enabling seamless ingestion of data from third party applications.</li>
-              <li>Modeled data (STAR schema) for a CRM application of a Motor Parts logistics company to support enhanced performance tracking and scalable data architecture.</li>
-              <li>Gained hands-on experience with Azure cloud and DevOps practices through rigorous client simulations.</li>
+              <li>Led day-to-day operations for a high-volume retail environment, managing a team of 10+ staff while ensuring adherence to operational, safety and quality standards.</li>
+              <li>Reduced weekly food waste by 18% and achieved stock availability of 98% by conducting precise daily/weekly counts and auditing high-cost items.</li>
             </ul>
           </div>
         </div>
@@ -770,58 +725,58 @@
         <div class="edu-col reveal">
           <div class="col-lbl">Education</div>
           <div class="edu-item">
-            <span class="logo"><span class="mono">QUB</span></span>
+            <span class="logo"><img src="images/logos/queens-university.png" alt="Queen's University Belfast"></span>
             <div class="body">
               <div class="degree">MSc Business Analytics</div>
               <div class="school">Queen's University Belfast</div>
-              <div class="when">2022 – 2023</div>
+              <div class="when">Sep 2022 – Dec 2023 · Percentage: 59%</div>
             </div>
           </div>
           <div class="edu-item">
-            <span class="logo"><span class="mono">MICA</span></span>
+            <span class="logo"><img src="images/logos/mica.png" alt="MICA, Ahmedabad"></span>
             <div class="body">
               <div class="degree">PG Certificate, Business Management</div>
               <div class="school">MICA, Ahmedabad</div>
-              <div class="when">2021 – 2022</div>
+              <div class="when">Jun 2021 – May 2022 · Grade: Pass</div>
             </div>
           </div>
           <div class="edu-item">
-            <span class="logo"><span class="mono">Mum</span></span>
+            <span class="logo"><img src="images/logos/university-of-mumbai.png" alt="University of Mumbai"></span>
             <div class="body">
               <div class="degree">B.Tech Computer Engineering</div>
               <div class="school">University of Mumbai</div>
-              <div class="when">2016 – 2020</div>
+              <div class="when">Jul 2015 – Dec 2019 · CGPA: 6.7/10</div>
             </div>
           </div>
         </div>
         <div class="reveal">
           <div class="col-lbl">Certifications</div>
           <div class="cert-item">
-            <span class="badge"><span class="mono">AWS</span></span>
+            <span class="badge"><img src="images/logos/aws.png" alt="AWS"></span>
             <div class="txt">
               <div class="name">AWS Certified: Data Engineer Associate</div>
               <div class="issuer">Amazon Web Services · Mar 2026 – Mar 2029</div>
             </div>
           </div>
           <div class="cert-item">
-            <span class="badge"><span class="mono">GO</span></span>
+            <span class="badge"><img src="images/logos/google.png" alt="Google"></span>
             <div class="txt">
               <div class="name">Google Advanced Data Analytics Certificate</div>
-              <div class="issuer">Google · Issued Jan 2025</div>
+              <div class="issuer">Google (Coursera) · Issued Jan 2025</div>
             </div>
           </div>
           <div class="cert-item">
-            <span class="badge"><span class="mono">MS</span></span>
-            <div class="txt">
-              <div class="name">Microsoft Certified: Azure Fundamentals</div>
-              <div class="issuer">Microsoft · Issued Oct 2024</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="badge"><span class="mono">PMI</span></span>
+            <span class="badge"><img src="images/logos/pmi.png" alt="PMI"></span>
             <div class="txt">
               <div class="name">PMI Certified: Project Management Ready</div>
               <div class="issuer">PMI · Issued Nov 2024</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="badge"><img src="images/logos/microsoft.png" alt="Microsoft"></span>
+            <div class="txt">
+              <div class="name">Microsoft Certified: Azure Fundamentals</div>
+              <div class="issuer">Microsoft · Issued Oct 2024</div>
             </div>
           </div>
         </div>
@@ -896,7 +851,7 @@
           <div class="proj-info">
             <div class="kind">NLP · GitHub</div>
             <h3>Twitter sentiment &amp; engagement prediction</h3>
-            <p>Ran sentiment analysis and engagement prediction on 40,000 tweets using VADER and TextBlob, then benchmarked Random Forest (72.61% accuracy), Linear Regression and Naive Bayes to forecast tweet likes.</p>
+            <p>Ran sentiment analysis and engagement prediction on 40,000 of Donald Trump's tweets using VADER and TextBlob, then benchmarked Random Forest, Linear Regression and Naive Bayes to forecast tweet likes. Found his Twitter activity peaked just before and after his presidency, with "make America great again" and "fake news" the most common phrases in his most viral tweets.</p>
             <div class="proj-tools"><b>Stack:</b> Python · VADER · TextBlob · Random Forest</div>
             <a class="proj-link" href="https://github.com/kartik981/Twitter-Text-Mining-for-Sentiment-Analysis-" target="_blank" rel="noopener">View repo <span class="arw">↗</span></a>
           </div>
@@ -974,9 +929,9 @@
         <div class="eyebrow">Let's connect</div>
         <h2 class="serif">Have a question <span class="ital">your data can't answer yet?</span></h2>
       </div>
-      <div class="connect-grid">
+      <div class="connect-grid connect-grid-solo">
         <div class="connect-buttons reveal">
-          <a class="connect-btn" id="email-btn" style="--glow:#3c56be" href="#" data-user="kartikk981" data-domain="gmail.com">
+          <a class="connect-btn" id="email-btn" style="--glow:#3c56be" href="#" data-user="kartikkokane4" data-domain="gmail.com">
             <span class="go">↗</span>
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
             <span class="lbl">Email</span>
@@ -1001,29 +956,6 @@
             <span class="sub">PDF resume</span>
           </a>
         </div>
-
-        <form class="connect-form reveal" id="contact-form">
-          <h3>Send a message</h3>
-          <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
-          <input type="hidden" name="subject" value="New message from portfolio site">
-          <input type="hidden" name="from_name" value="Portfolio contact form">
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" required></textarea>
-          </div>
-          <button class="form-submit" type="submit">
-            <span class="btn-label">Send message</span>
-          </button>
-          <div class="form-status" id="cf-status"></div>
-        </form>
       </div>
     </div>
   </section>
@@ -1194,7 +1126,7 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('.metric .num').forEach(el=>countIO.observe(el));
 
-  /* ---------------- Contact form (FormSubmit AJAX, no page leave) ---------------- */
+  /* ---------------- Email button (mailto, avoids exposing address to scrapers) ---------------- */
   (function(){
     const btn = document.getElementById('email-btn');
     if(btn){
@@ -1202,33 +1134,6 @@
       btn.href = 'mailto:' + addr;
       document.getElementById('email-btn-sub').textContent = addr;
     }
-  })();
-  (function(){
-    const form = document.getElementById('contact-form');
-    if(!form) return;
-    const status = document.getElementById('cf-status');
-    const btn = form.querySelector('.form-submit');
-    const label = btn.querySelector('.btn-label');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      btn.disabled = true; label.textContent = 'Sending…';
-      status.textContent = ''; status.className = 'form-status';
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form)))
-      }).then(r => r.json()).then(json => {
-          if (!json.success) throw new Error(json.message || 'failed');
-          status.textContent = "Thanks — your message is on its way. I'll reply soon.";
-          status.className = 'form-status ok';
-          form.reset();
-        })
-        .catch(()=>{
-          status.textContent = 'Something went wrong — email me directly at kartikk981@gmail.com.';
-          status.className = 'form-status err';
-        })
-        .finally(()=>{ btn.disabled = false; label.textContent = 'Send message'; });
-    });
   })();
 
   /* ---------------- Project carousels ---------------- */
